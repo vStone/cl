@@ -108,9 +108,7 @@ class Cl
       end
 
       def taint(opts)
-        opts.map do |key, value|
-          [key, self[key] && self[key].secret? ? value.taint : value]
-        end.to_h
+        opts.to_h
       end
   end
 end

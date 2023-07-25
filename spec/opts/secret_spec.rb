@@ -6,6 +6,5 @@ describe Cl, 'opts' do
 
     it { expect(const.opts.first.secret?).to be true }
     it { expect(cmd(%w(cmd --str str)).opts[:str]).to eq 'str' }
-    it { expect(cmd(%w(cmd --str str)).opts[:str].tainted?).to be true }
   end
 end

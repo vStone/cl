@@ -10,7 +10,7 @@ $: << File.expand_path('lib')
     def run
       p(
         secret?: self.class.opts[:pass].secret?,
-        tainted?: pass.tainted?
+        tainted?: pass
       )
     end
   end
